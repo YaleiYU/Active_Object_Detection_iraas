@@ -27,12 +27,19 @@ end
 
 %%
 % % Simulated parameters for scenario 1
-s.th1 = -0.0714;
-s.th2 = 0.0842;
-s.th3 = 0.0329;
-s.th4 = 0.0914;
-s.th5 = 0.2443;
-s.th6 = 0.0275;
+% s.th1 = -0.0714;
+% s.th2 = 0.0842;
+% s.th3 = 0.0329;
+% s.th4 = 0.0914;
+% s.th5 = 0.2443;
+% s.th6 = 0.0275;
+
+s.th1 = 26.447;
+s.th2 = 1.6016;
+s.th3 = 0.7485;
+s.th4 = 11.4793;
+s.th5 = -3.6871;
+s.th6 = -6.3225;
 
 s_x = 0.0937;
 s_y = -0.5885;
@@ -131,7 +138,6 @@ for mc=1:Num_run
 
     P_vari = vari_th1 + vari_th2 + vari_th3 + vari_th4 +vari_th5 + vari_th6;
 
-
     % Wp refers to particle weights
     Wp = ones(N, 1);
     Wpnorm = Wp./sum(Wp);
@@ -154,7 +160,6 @@ for mc=1:Num_run
     for i = 1: Numl
         %% tracking error and parameter estimation variance 
         Tracking_error_hist(mc,i) = norm(P_k - s_k);
-        % P_vari_hist(mc,i) = P_vari;
         P_vari_hist(mc,i) = P_vari;
 
         %% simulated data
@@ -231,6 +236,7 @@ for mc=1:Num_run
         grid on
         hold on
         plot3(pos.x, pos.y, pos.z,'r o','MarkerFaceColor','b','MarkerSize',5)
+        hold on;
         xlab = xlabel('$x$');
         ylab = ylabel('$y$');
         zlab = zlabel('$z$');
@@ -242,6 +248,32 @@ for mc=1:Num_run
         % axis([xmin xmax ymin ymax])
         axis tight
         drawnow
+        fill3([1 1 1 1]*scalar_domain,[0.1-offset_y -0.1-offset_y -0.1-offset_y 0.1-offset_y], [0,0,1,1]*scalar_domain,'b') % plot the obstacles, wall
+        hold on;
+        % Define the edge length
+        edgeLength = 0.3*scalar_domain;
+        % Define the cube's center
+        center = [0, -offset_y, 0]; % Center at (0,0,0)
+        % Define the vertices of the cube relative to the center
+        X = center(1) + [-1 1 1 -1 -1 1 1 -1] * (edgeLength / 2);
+        Y = center(2) + [-1 -1 1 1 -1 -1 1 1] * (edgeLength / 2);
+        Z = center(3) + [-1 -1 -1 -1 1 1 1 1] * (edgeLength / 2);
+        hold on;
+        faces = [
+            1 2 3 4; % Bottom face
+            5 6 7 8; % Top face
+            1 2 6 5; % Front face
+            2 3 7 6; % Right face
+            3 4 8 7; % Back face
+            4 1 5 8; % Left face
+            ];
+
+        % Define the color (Red)
+        color = [1 0 0];
+        hold on;
+        for iii = 1:size(faces,1)
+            fill3(X(faces(iii,:)), Y(faces(iii,:)), Z(faces(iii,:)), color, 'FaceAlpha', 1, 'EdgeColor', 'k');
+        end
 
         %%
         frame = getframe(gcf);
@@ -398,12 +430,11 @@ for mc=1:Num_run
         Tracking_error_store_dcee = [Tracking_error_store_dcee; Tracking_error];
 
         P_vari_store_dcee = [P_vari_store_dcee; P_vari];
-
         conc_est_store_dcee = [conc_est_store_dcee; conc_est];
 
         %% tracking error and parameter estimation variance 
         P_kk.x=P_k(1); P_kk.y=P_k(2); P_kk.z=P_k(3); 
-        Tracking_trajectory_hist(mc,i) = P_kk; 
+        Tracking_trajectory_hist_dcee(mc,i) = P_kk; 
 
     end
     indx = resampleStratified(Wpnorm);
@@ -437,8 +468,8 @@ folder = '/home/lboro/Documents/IRaaS/DCEE_active_object_detection/Experiments_D
 save(fullfile(folder, 'P_vari_mc_10_dcee'), 'P_vari_mc_10_dcee');
 save(fullfile(folder, 'Tracking_error_mc_10_dcee'), 'Tracking_error_mc_10_dcee'); 
 
-
-
+% save(fullfile(folder, 'Tracking_trajectory_hist_dcee'), 'Tracking_trajectory_hist_dcee'); 
+save(fullfile(folder, 'P_k_store_dcee'), 'P_k_store_dcee'); 
 
 
 

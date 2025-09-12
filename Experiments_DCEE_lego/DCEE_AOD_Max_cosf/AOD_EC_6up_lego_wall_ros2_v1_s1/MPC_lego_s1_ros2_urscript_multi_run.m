@@ -26,12 +26,19 @@ end
 
 %%
 % % Simulated parameters for scenario 1
-s.th1 = -0.0714;
-s.th2 = 0.0842;
-s.th3 = 0.0329;
-s.th4 = 0.0914;
-s.th5 = 0.2443;
-s.th6 = 0.0275;
+% s.th1 = -0.0714;
+% s.th2 = 0.0842;
+% s.th3 = 0.0329;
+% s.th4 = 0.0914;
+% s.th5 = 0.2443;
+% s.th6 = 0.0275;
+
+s.th1 = 26.447;
+s.th2 = 1.6016;
+s.th3 = 0.7485;
+s.th4 = 11.4793;
+s.th5 = -3.6871;
+s.th6 = -6.3225;
 
 s_x = 0.0937;
 s_y = -0.5885;
@@ -300,7 +307,7 @@ for mc=1:Num_run
 
             P_vari = vari_th1+vari_th2+vari_th3+vari_th4+vari_th5+vari_th6;
 
-            conf_theta(k) = Conf_Distri_Rewa_Fun(theta_mean, npos);
+            conf_theta(k) = Conf_Distri_Rewa_Fun(theta_mean, npos)+P_vari;
 
             dualControlJ(k) = conf_theta(k);
         end
@@ -413,7 +420,7 @@ folder = '/home/lboro/Documents/IRaaS/DCEE_active_object_detection/Experiments_D
 
 save(fullfile(folder, 'P_vari_mc_10_mpc'), 'P_vari_mc_10_mpc');
 save(fullfile(folder, 'Tracking_error_mc_10_mpc.mat'), 'Tracking_error_mc_10_mpc');
-
+save(fullfile(folder, 'P_k_store_mpc'), 'P_k_store_mpc'); 
 
 
 
