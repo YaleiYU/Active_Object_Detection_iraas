@@ -1,0 +1,19 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore virtual environments
+venv/
+
+# Ignore logs
+*.log
+
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore ros2 folder
+build/
+install/
+log/
