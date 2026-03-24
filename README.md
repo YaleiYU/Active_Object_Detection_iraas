@@ -18,6 +18,7 @@ This repository contains
 
 ## Results  
 - 
+![Demo](Results/dcee_aod.gif)
 
 <!-- ![lookahead](Figures/Numerical%20Sim/grad_lksdcee.png) -->
 
