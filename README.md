@@ -11,6 +11,9 @@ This work proposes a novel approach for active object detection that balances ex
 - Proposed a novel approach for active object detection that balances exploration and exploitation. 
 - Developed a measurement model that incorporates both the detection performance and the exploration potential of the robot's actions, allowing for a more informed decision-making process in active object detection tasks.
 - Evaluated the method through simulations and real-world experiments, demonstrating its effectiveness in improving detection performance while navigating through the environment.
+- Demostration of the pipeline is given in the following figure
+![Pipeline](Results/aod_fig1.png)
+
 
 ## Requirements
 - MATLAB R2024b
