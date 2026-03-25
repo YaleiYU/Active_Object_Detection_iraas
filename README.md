@@ -23,6 +23,11 @@ This repository contains
 - Active object detection for lego bricks in real-world scenarios using the proposed DCEE method. The robot successfully detects the target objects while navigating through the environment, demonstrating the effectiveness of the proposed approach in real-world applications. 
 ![Demo](Results/dcee_aod_expt.gif)
 
+- The videos of simulations and experiments have been uploaded to YouTube and can be accessed through the following links:
+  - [Active Object Detection Results](https://www.youtube.com/watch?v=FdFXst8uWxc)
+  <!-- - [Active Object Detection Experiment](https://www.youtube.com/watch?v=experiment_video_link) -->
+
+
 <!-- ![lookahead](Figures/Numerical%20Sim/grad_lksdcee.png) -->
 
 
