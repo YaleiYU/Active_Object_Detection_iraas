@@ -17,7 +17,9 @@ This repository contains
 ```run the scripts in MATLAB to perform the simulations```
 
 ## Results  
-- 
+- Active object detection for lego bricks searching in MATLAB simulations using the proposed DCEE method. The robot successfully detects the target objects while navigating through the environment, demonstrating the effectiveness of the proposed approach in simulation scenarios.
+![Sim](Results/dcee_aod_matlab_simu.gif)
+- Active object detection for lego bricks in real-world scenarios using the proposed DCEE method. The robot successfully detects the target objects while navigating through the environment, demonstrating the effectiveness of the proposed approach in real-world applications. 
 ![Demo](Results/dcee_aod.gif)
 
 <!-- ![lookahead](Figures/Numerical%20Sim/grad_lksdcee.png) -->
