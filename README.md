@@ -13,8 +13,16 @@ This repository contains
 - MATLAB R2024b
 
   
-## Usage
+## Qick Start
 ```run the scripts in MATLAB to perform the simulations```
+
+
+## Experiments setting 
+ - There are five steps to run the experiments, for details please see the repository：https://github.com/YaleiYU/UR5e-YOLO-Vision-Integration
+
+ - The structure is given in the following figure
+
+![Structure](Results/ros2_system_diagram.pdf)
 
 ## Results  
 - Active object detection for lego bricks searching in MATLAB simulations using the proposed DCEE method. The robot successfully detects the target objects while navigating through the environment, demonstrating the effectiveness of the proposed approach in simulation scenarios.
