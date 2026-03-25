@@ -22,7 +22,7 @@ This repository contains
 
  - The structure is given in the following figure
 
-![Structure](Results/ros2_system_diagram.pdf)
+![Structure](Results/ros2_system_diagram.png)
 
 ## Results  
 - Active object detection for lego bricks searching in MATLAB simulations using the proposed DCEE method. The robot successfully detects the target objects while navigating through the environment, demonstrating the effectiveness of the proposed approach in simulation scenarios.
