@@ -1,118 +1,127 @@
-# Active_Object_Detection_iraas
+# Active_Object_Detection_IRaaS
 
+## 📌 Overview
+This repository implements the paper:
 
-## Overview
-This repository is the implementation of the paper "A Goal-Oriented Approach for Active Object Detection with Exploration-Exploitation Balance" with the link https://arxiv.org/abs/2509.11467.
-This work proposes a novel approach for active object detection that balances exploration and exploitation to efficiently detect target objects in complex environments. The method is evaluated through simulations and real-world experiments, demonstrating its effectiveness in improving detection performance while navigating through the environment. The repository includes the code for the proposed method, as well as instructions for running the simulations and experiments. 
+**"A Goal-Oriented Approach for Active Object Detection with Exploration-Exploitation Balance"**  
+🔗 https://arxiv.org/abs/2509.11467  
 
+The project introduces a novel framework for **active object detection**, enabling robots to intelligently balance:
+- **Exploration** (searching new areas)
+- **Exploitation** (focusing on likely target regions)
 
+This balance improves detection efficiency in complex environments. The approach is validated through both **simulation** and **real-world experiments** using a UR5e robotic system.
 
-## Features
-- Proposed a novel approach for active object detection that balances exploration and exploitation. 
-- Developed a measurement model that incorporates both the detection performance and the exploration potential of the robot's actions, allowing for a more informed decision-making process in active object detection tasks.
-- Evaluated the method through simulations and real-world experiments, demonstrating its effectiveness in improving detection performance while navigating through the environment.
-- Demostration of the pipeline is given in the following figure
-<!-- ![Pipeline](Results/aod_fig1.png) -->
+---
 
+## 🚀 Key Features
+- 🎯 Goal-oriented active object detection strategy  
+- ⚖️ Balanced exploration–exploitation decision-making  
+- 🧠 Measurement model integrating:
+  - Detection confidence
+  - Exploration potential  
+- 🤖 Integration with real robotic hardware (UR5e + RealSense + YOLO)  
+- 📊 Verified in both simulation and real-world scenarios  
 
+---
 
-## Qick Start
-- There are five steps to run the experiments, for details please see the repository：https://github.com/YaleiYU/UR5e-YOLO-Vision-Integration 
+## 🧭 System Pipeline
+The full pipeline integrates perception, decision-making, and control:
+
+- RealSense camera → Point cloud
+- YOLO → Object detection
+- Confidence bridge → Data fusion
+- MATLAB → Decision-making (DCEE algorithm)
+- UR5e → Motion execution
+
+---
+
+## ⚡ Quick Start
+
+Follow these steps to run the real-world experiment:
 
 ### 1️⃣ Launch RealSense Camera
-
 ```bash
 ros2 launch realsense2_camera rs_pointcloud_launch.py
 ```
 
----
-
 ### 2️⃣ Launch UR5e Driver
-
 ```bash
 ros2 launch ur_robot_driver ur_control.launch.py ur_type:=ur5e robot_ip:=158.125.190.88
 ```
 
----
-
 ### 3️⃣ Launch YOLO Detection Node
-
 ```bash
 ros2 launch yolov5_ros2 yolov5_ros2
 ```
 
-
 ### 4️⃣ Launch Confidence Bridge Node
-
 ```bash
 ros2 run confid_subpub confid_subpub
 ```
 
-### 5️⃣ Launch MATLAB Control Node
-
-Run in MATLAB:
-
+### 5️⃣ Run MATLAB Control Node
 ```matlab
 DCEE_lego_s1_ros2_urscript_multi_run.m
 ```
 
+📎 Full setup instructions:  
+https://github.com/YaleiYU/UR5e-YOLO-Vision-Integration  
+
 ---
 
-## Experiments setting 
- 
- - The structure is given in the following figure
+## 🧪 Experiments
 
-![Structure](Results/ros2_system_diagram.png)
+### Simulation
+- LEGO brick detection in MATLAB environment  
+- Demonstrates efficient exploration and detection  
 
-## Results  
-- Active object detection for lego bricks searching in MATLAB simulations using the proposed DCEE method. The robot successfully detects the target objects while navigating through the environment, demonstrating the effectiveness of the proposed approach in simulation scenarios.
-![Sim](Results/dcee_aod_matlab_simu.gif)
+### Real-World Experiment
+- UR5e robot performs active search  
+- Successfully detects targets in physical environment  
 
-- Active object detection for lego bricks in real-world scenarios using the proposed DCEE method. The robot successfully detects the target objects while navigating through the environment, demonstrating the effectiveness of the proposed approach in real-world applications. 
-![Demo](Results/dcee_aod_expt.gif)
+🎥 Demo Video:  
+https://www.youtube.com/watch?v=FdFXst8uWxc  
 
-- The videos of simulations and experiments have been uploaded to YouTube and can be accessed through the following links:
-  - [Active Object Detection Results](https://www.youtube.com/watch?v=FdFXst8uWxc)
-  <!-- - [Active Object Detection Experiment](https://www.youtube.com/watch?v=experiment_video_link) -->
+---
 
+## 🛠 Requirements
+- MATLAB R2024b  
+- ROS2  
+- Intel RealSense Camera  
+- UR5e Robot  
+- YOLOv5 ROS2 package  
 
-<!-- ![lookahead](Figures/Numerical%20Sim/grad_lksdcee.png) -->
+---
 
+## 📜 License
+This project is licensed under the MIT License.  
+See the `LICENSE` file for details.
 
-## Requirements
-- MATLAB R2024b
+---
 
-  
+## 🙏 Acknowledgments
+This work was supported by:
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- UK EPSRC Established Career Fellowship  
+  *“Goal-Oriented Control Systems: Disturbance, Uncertainty and Constraints”* (EP/T005734/1)
 
+- EPSRC Project  
+  *“Industrial Robots-as-a-Service (IRaaS)”* (EP/V050966/2)
 
-## Acknowledgments
-- Thanks to the contributors and maintainers of the open-source libraries and tools used in this project.
-- Special thanks to the research community for their valuable insights and feedback.
-- This work was supported by by the UK Engineering and Physical Sciences Research Council (EPSRC) Established Career Fellowship “Goal-Oriented Control Systems: Disturbance, Uncertainty and Constraints” under the grant number EP/T005734/1, and EPSRC research grant “Industrial Robots-as-a-Service (IRaaS) - Resilient and responsive manufacturing systems enabled by rapidly deployable mobile robots" under the grant number EP/V050966/2.
+Special thanks to the open-source community and contributors.
 
+---
 
-<!-- ## Contact
-y.yu2@lboro.ac.uk -->
+## 📖 Citation
+If you use this work, please cite:
 
-
-## Citation
-If you use this code in your research, please cite the following paper:
-
-``` bibtex 
+```bibtex
 @misc{yu2025goal,
      author        = {Yu, Yalei and Coombes, Matthew and Chen, Wen-Hua and Sun, Cong and Flanagan, Myles and Jiang, Jingjing and Pashupathy, Pramod and Sotoodeh-Bahraini, Masoud and Kinnell, Peter and Lohse, Niels},
-     journal       = {arXiv preprint arXiv:2509.11467},
      title         = {{A Goal-Oriented Approach for Active Object Detection with Exploration-Exploitation Balance}},
+     journal       = {arXiv preprint arXiv:2509.11467},
      year          = {2025},
-     archiveprefix = {arXiv},
-     arxivid       = {2509.11467},
-     eprint        = {2509.11467},
-     url           = {http://arxiv.org/abs/2509.11467},
+     url           = {http://arxiv.org/abs/2509.11467}
 }
-
-
 ```
-
