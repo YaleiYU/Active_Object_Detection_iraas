@@ -1,6 +1,6 @@
 # Active_Object_Detection_IRaaS
 
-## 📌 Overview
+## Overview
 This repository implements the paper:
 
 **"A Goal-Oriented Approach for Active Object Detection with Exploration-Exploitation Balance"**  
@@ -14,7 +14,7 @@ This balance improves detection efficiency in complex environments. The approach
 
 ---
 
-## 🚀 Key Features
+## Key Features
 - 🎯 Goal-oriented active object detection strategy  
 - ⚖️ Balanced exploration–exploitation decision-making  
 - 🧠 Measurement model integrating:
@@ -25,7 +25,7 @@ This balance improves detection efficiency in complex environments. The approach
 
 ---
 
-## 🧭 System Pipeline
+## System Pipeline
 The full pipeline integrates perception, decision-making, and control:
 
 - RealSense camera → Images
@@ -36,7 +36,7 @@ The full pipeline integrates perception, decision-making, and control:
 
 ---
 
-## ⚡ Quick Start
+## Quick Start
 
 Follow these steps to run the real-world experiment:
 
@@ -70,7 +70,7 @@ https://github.com/YaleiYU/UR5e-YOLO-Vision-Integration
 
 ---
 
-## 🧪 Experiments
+## Experiments
 
 ### Simulation
 - LEGO brick detection in Isaac Sim environment  
@@ -88,7 +88,7 @@ https://www.youtube.com/watch?v=FdFXst8uWxc
 
 ---
 
-## 🛠 Requirements
+## Requirements
 - MATLAB R2024b  
 - ROS2  
 - Intel RealSense Camera  
@@ -98,7 +98,7 @@ https://www.youtube.com/watch?v=FdFXst8uWxc
 
 ---
 
-## 📜 License
+## License
 This project is licensed under the MIT License.  
 See the `LICENSE` file for details.
 
@@ -117,7 +117,7 @@ Special thanks to the open-source community and contributors.
 
 ---
 
-## 📖 Citation
+## Citation
 If you use this work, please cite:
 
 ```bibtex
