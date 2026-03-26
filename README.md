@@ -15,13 +15,13 @@ This balance improves detection efficiency in complex environments. The approach
 ---
 
 ## Key Features
-- 🎯 Goal-oriented active object detection strategy  
-- ⚖️ Balanced exploration–exploitation decision-making  
-- 🧠 Measurement model integrating:
+- Goal-oriented active object detection strategy  
+- Balanced exploration–exploitation decision-making  
+- Measurement model integrating:
   - Detection confidence
   - Exploration potential  
-- 🤖 Integration with real robotic hardware (UR5e + RealSense + YOLO)  
-- 📊 Verified in both simulation and real-world scenarios  
+- Integration with real robotic hardware (UR5e + RealSense + YOLO)  
+- Verified in both simulation and real-world scenarios  
 
 ---
 
