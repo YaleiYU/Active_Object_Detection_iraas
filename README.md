@@ -102,4 +102,21 @@ y.yu2@lboro.ac.uk
 
 
 
+## Citation
+If you use this code in your research, please cite the following paper:
+
+``` bibtex 
+@misc{yu2025goal,
+     author        = {Yu, Yalei and Coombes, Matthew and Chen, Wen-Hua and Sun, Cong and Flanagan, Myles and Jiang, Jingjing and Pashupathy, Pramod and Sotoodeh-Bahraini, Masoud and Kinnell, Peter and Lohse, Niels},
+     journal       = {arXiv preprint arXiv:2509.11467},
+     title         = {{A Goal-Oriented Approach for Active Object Detection with Exploration-Exploitation Balance}},
+     year          = {2025},
+     archiveprefix = {arXiv},
+     arxivid       = {2509.11467},
+     eprint        = {2509.11467},
+     url           = {http://arxiv.org/abs/2509.11467},
+}
+
+
+```
 
