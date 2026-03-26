@@ -73,7 +73,7 @@ https://github.com/YaleiYU/UR5e-YOLO-Vision-Integration
 ## 🧪 Experiments
 
 ### Simulation
-- LEGO brick detection in MATLAB environment  
+- LEGO brick detection in Isaac Sim environment  
 - Demonstrates efficient exploration and detection  
 
 ### Real-World Experiment
@@ -104,7 +104,7 @@ See the `LICENSE` file for details.
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 This work was supported by:
 
 - UK EPSRC Established Career Fellowship  
