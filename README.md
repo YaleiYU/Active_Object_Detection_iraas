@@ -28,7 +28,7 @@ This balance improves detection efficiency in complex environments. The approach
 ## 🧭 System Pipeline
 The full pipeline integrates perception, decision-making, and control:
 
-- RealSense camera → Point cloud
+- RealSense camera → Images
 - YOLO → Object detection
 - Confidence bridge → Data fusion
 - MATLAB → Decision-making (DCEE algorithm)
