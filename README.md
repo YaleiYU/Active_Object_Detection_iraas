@@ -83,6 +83,9 @@ https://github.com/YaleiYU/UR5e-YOLO-Vision-Integration
 🎥 Demo Video:  
 https://www.youtube.com/watch?v=FdFXst8uWxc  
 
+![Sim](Results/dcee_aod_matlab_simu.gif)
+![Demo](Results/dcee_aod_expt.gif)
+
 ---
 
 ## 🛠 Requirements
@@ -91,6 +94,7 @@ https://www.youtube.com/watch?v=FdFXst8uWxc
 - Intel RealSense Camera  
 - UR5e Robot  
 - YOLOv5 ROS2 package  
+
 
 ---
 
