@@ -15,10 +15,7 @@ This work proposes a novel approach for active object detection that balances ex
 <!-- ![Pipeline](Results/aod_fig1.png) -->
 
 
-## Requirements
-- MATLAB R2024b
 
-  
 ## Qick Start
 - There are five steps to run the experiments, for details please see the repository：https://github.com/YaleiYU/UR5e-YOLO-Vision-Integration 
 
@@ -86,6 +83,10 @@ DCEE_lego_s1_ros2_urscript_multi_run.m
 <!-- ![lookahead](Figures/Numerical%20Sim/grad_lksdcee.png) -->
 
 
+## Requirements
+- MATLAB R2024b
+
+  
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
@@ -99,7 +100,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 y.yu2@lboro.ac.uk
-
 
 
 ## Citation
