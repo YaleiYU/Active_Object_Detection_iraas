@@ -20,12 +20,53 @@ This work proposes a novel approach for active object detection that balances ex
 
   
 ## Qick Start
-```run the scripts in MATLAB to perform the simulations```
+- There are five steps to run the experiments, for details please see the repository：https://github.com/YaleiYU/UR5e-YOLO-Vision-Integration 
 
+### 1️⃣ Launch RealSense Camera
+
+```bash
+ros2 launch realsense2_camera rs_pointcloud_launch.py
+```
+
+---
+
+### 2️⃣ Launch UR5e Driver
+
+```bash
+ros2 launch ur_robot_driver ur_control.launch.py ur_type:=ur5e robot_ip:=158.125.190.88
+```
+
+---
+
+### 3️⃣ Launch YOLO Detection Node
+
+```bash
+ros2 launch yolov5_ros2 yolov5_ros2
+```
+
+
+### 4️⃣ Launch Confidence Bridge Node
+
+```bash
+ros2 run confid_subpub confid_subpub
+```
+
+### 5️⃣ Launch MATLAB Control Node
+
+```bash
+matlab -softwareopengl
+```
+
+Run in MATLAB:
+
+```matlab
+ur5e_ros2_lookAt_control.m
+```
+
+---
 
 ## Experiments setting 
- - There are five steps to run the experiments, for details please see the repository：https://github.com/YaleiYU/UR5e-YOLO-Vision-Integration
-
+ 
  - The structure is given in the following figure
 
 ![Structure](Results/ros2_system_diagram.png)
