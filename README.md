@@ -50,10 +50,6 @@ ros2 run confid_subpub confid_subpub
 
 ### 5️⃣ Launch MATLAB Control Node
 
-```bash
-matlab
-```
-
 Run in MATLAB:
 
 ```matlab
@@ -98,8 +94,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - This work was supported by by the UK Engineering and Physical Sciences Research Council (EPSRC) Established Career Fellowship “Goal-Oriented Control Systems: Disturbance, Uncertainty and Constraints” under the grant number EP/T005734/1, and EPSRC research grant “Industrial Robots-as-a-Service (IRaaS) - Resilient and responsive manufacturing systems enabled by rapidly deployable mobile robots" under the grant number EP/V050966/2.
 
 
-## Contact
-y.yu2@lboro.ac.uk
+<!-- ## Contact
+y.yu2@lboro.ac.uk -->
 
 
 ## Citation
