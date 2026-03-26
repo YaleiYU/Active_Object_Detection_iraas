@@ -54,13 +54,13 @@ ros2 run confid_subpub confid_subpub
 ### 5️⃣ Launch MATLAB Control Node
 
 ```bash
-matlab -softwareopengl
+matlab
 ```
 
 Run in MATLAB:
 
 ```matlab
-ur5e_ros2_lookAt_control.m
+DCEE_lego_s1_ros2_urscript_multi_run.m
 ```
 
 ---
