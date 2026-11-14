@@ -70,6 +70,44 @@ https://github.com/YaleiYU/UR5e-YOLO-Vision-Integration
 
 ---
 
+## Isaac Sim Virtual Simulation
+
+Follow these steps to run the virtual simulation in Isaac Sim.
+
+The Isaac Sim assets (USD scenes and LEGO brick models) are provided in the `DCEE_AOD_Assets` folder.
+
+> **Note:** `pre_isaac_sim_setup` and `iraas_python` are shell aliases on the lab machine. Define equivalents on your own system, e.g. in `~/.bashrc`:
+> ```bash
+> # Point LD_LIBRARY_PATH at Isaac Sim's bundled ROS2 libraries so omni.isaac.ros2_bridge can load
+> alias pre_isaac_sim_setup='export ROS_DISTRO=humble RMW_IMPLEMENTATION=rmw_fastrtps_cpp LD_LIBRARY_PATH=$LD_LIBRARY_PATH:<ISAAC_SIM_ROOT>/exts/omni.isaac.ros2_bridge/humble/lib'
+> # Isaac Sim's bundled Python interpreter
+> alias iraas_python='<ISAAC_SIM_ROOT>/python.sh'
+> ```
+> where `<ISAAC_SIM_ROOT>` is your Isaac Sim installation directory (e.g. `~/.local/share/ov/pkg/isaac-sim-<version>`).
+
+### 1️⃣ Launch Isaac Sim with ROS2 for Images
+```bash
+pre_isaac_sim_setup   # sets LD_LIBRARY_PATH to enable omni.isaac.ros2_bridge
+iraas_python ~/Documents/IRaaS/Active_object_detection/Isaac_sim_ws/launch_isaac_open_workspace.py   # runs the Isaac Sim launch file (can also be debugged in VS Code)
+```
+
+### 2️⃣ Launch YOLO Detector
+```bash
+ros2 launch yolov5_ros yolov5s_launch.py
+```
+
+### 3️⃣ Launch Confidence Score Publisher and Subscriber
+```bash
+iraas_python ~/Documents/IRaaS/Active_object_detection/Isaac_sim_ws/yolov5_sub_pub.py
+```
+
+### 4️⃣ Run DCEE Algorithm in MATLAB
+```matlab
+DCEE_lego_s1_ros2_multi_run.m
+```
+
+---
+
 ## Experiments
 
 ### Simulation
