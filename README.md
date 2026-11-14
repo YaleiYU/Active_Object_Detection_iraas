@@ -18,9 +18,16 @@ This balance improves detection efficiency in complex environments. The approach
 
 🎥 **Full video:** https://www.youtube.com/watch?v=FdFXst8uWxc
 
-| Simulation | Real-World Experiment (UR5e) |
-|:---:|:---:|
-| ![Sim](Results/dcee_aod_matlab_simu.gif) | ![Demo](Results/dcee_aod_expt.gif) |
+<table>
+  <tr>
+    <th width="45%">Simulation</th>
+    <th width="55%">Real-World Experiment (UR5e)</th>
+  </tr>
+  <tr>
+    <td width="45%" align="center"><img src="Results/dcee_aod_matlab_simu.gif" alt="Sim" width="100%"></td>
+    <td width="55%" align="center"><img src="Results/dcee_aod_expt.gif" alt="Demo" width="100%"></td>
+  </tr>
+</table>
 
 ---
 
