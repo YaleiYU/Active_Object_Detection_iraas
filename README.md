@@ -14,6 +14,16 @@ This balance improves detection efficiency in complex environments. The approach
 
 ---
 
+## Demo
+
+🎥 **Full video:** https://www.youtube.com/watch?v=FdFXst8uWxc
+
+| Simulation | Real-World Experiment (UR5e) |
+|:---:|:---:|
+| ![Sim](Results/dcee_aod_matlab_simu.gif) | ![Demo](Results/dcee_aod_expt.gif) |
+
+---
+
 ## Key Features
 - Goal-oriented active object detection strategy  
 - Balanced exploration–exploitation decision-making  
@@ -118,11 +128,7 @@ DCEE_lego_s1_ros2_multi_run.m
 - UR5e robot performs active search  
 - Successfully detects targets in physical environment  
 
-🎥 Demo Video:  
-https://www.youtube.com/watch?v=FdFXst8uWxc  
-
-![Sim](Results/dcee_aod_matlab_simu.gif)
-![Demo](Results/dcee_aod_expt.gif)
+See the [Demo](#demo) section above for videos of both.
 
 ---
 
