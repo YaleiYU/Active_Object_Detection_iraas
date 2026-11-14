@@ -446,7 +446,8 @@ time=datestr(now,'yyyy_mm_dd_hh');
 filename=sprintf('Result_%s.mat', time);
 
 %%
-folder = '/home/lboro/Documents/IRaaS/DCEE_active_object_detection/Experiments_DCEE/DCEE_AOD_Max_cosf/AOD_EC_6up_lego_wall_ros2_v1_s1/Datasets';
+folder = fullfile(fileparts(mfilename('fullpath')), 'Datasets');  % save next to this script
+if ~exist(folder, 'dir'), mkdir(folder); end
 
 save(fullfile(folder, 'P_vari_mc_10_entropy'), 'P_vari_mc_10_entropy');
 save(fullfile(folder, 'Tracking_error_mc_10_entropy'), 'Tracking_error_mc_10_entropy'); 

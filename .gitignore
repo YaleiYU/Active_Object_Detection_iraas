@@ -9,8 +9,8 @@ venv/
 *.log
 
 
-# Ignore system files
-.DS_Store
+# Ignore system files (macOS Finder metadata in any folder)
+**/.DS_Store
 Thumbs.db
 
 # Ignore ros2 folder
